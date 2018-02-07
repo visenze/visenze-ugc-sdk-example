@@ -1,0 +1,29 @@
+<div [hidden]="imageObject.url==''">
+    <img (click)="onClick(template)" [src]="imageObject.url">
+</div>
+
+<ng-template #template>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Tagged Products</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="row" *ngFor="let product of products">
+            <a target="_blank" routerLink="/product/{{campaignId}}/{{product.im_name}}" routerLinkActive="active">
+                <img (click)="onProductClick(product)" class="product-img" [src]="product.im_url">
+            </a>
+            <ul class="list-group col-8">
+                <li class="list-group-item">Title: {{product.title}}</li>
+                <li class="list-group-item">Price: {{product.price}}</li>
+                <li class="list-group-item">Gender: {{product.gender}}</li>
+                <li class="list-group-item">
+                    <button type="button" (click)="onBuyBtnClick(product)" class="btn btn-secondary">Buy</button>
+                    <button type="button" (click)="onCartBtnClick(product)" class="btn btn-secondary">Cart</button>
+                    <button type="button" (click)="onWishlistBtnClick(product)" class="btn btn-secondary">Wishlist</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</ng-template>
