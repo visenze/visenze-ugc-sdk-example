@@ -5,14 +5,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 Run `npm install` to install all dependencied of this sample.
 
-Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Configration
 You may change the default settings in
 `src/environments/environment.ts`
 
 Valid accessKey, secretKey, and campaignId are required.
-Also remember to change to the same campaignId in the javascript snippet of root index.html.
+Also remember to change to the same campaignId in the javascript snippet of src/index.html.
+
 You can change the api address in proxy.conf.json after `"target": `.
 
 ## Place to find examples of api call
