@@ -1,0 +1,13 @@
+img {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+}
+
+.product-img {
+    max-height: 200px;
+    width: auto
+}
+.list-group {
+    padding-top: 10px;
+}

@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "https://moderation-api.visenze.com",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "changeOrigin": true
+  }
+}
